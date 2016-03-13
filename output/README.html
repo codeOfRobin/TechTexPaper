@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Smart Bandages</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="smart-bandages"><a class="header-link" href="#smart-bandages"></a>Smart Bandages</h1>
+<p>In smart bandages, sensors are integrated to provide a measure for the pressure applied to a human. Examples of these include :-</p>
+<ul class="list">
+<li><strong>The Salzmann Medico Sub-bandage Pressure Monitor</strong> : This device consists of a monitor and thin plastic sleeve with four paired electrical contact probes, which is laid on the leg surface and bandaged over.  The sleeve is inflated with air until the contacts are broken when the pressure exerted by the air is greater than the pressure exerted by the outer compression layer.</li>
+<li><strong>The Oxford Pressure Monitor Mark 2</strong> : measures pressure by observation of the pressure flow characteristics of small pulses of air. The probes can be taped together or are available as a sheet.</li>
+</ul>
+<p>For the measurement in compression bandages, 2 types of sensors can be considered - Force sensors and air sensors. The pressure sensors would have to be accurate, reliable, robust and small.</p>
+<p>Air Sensors are small air filled devices. The sensor has a sponge filling used to maintain the shape of the device and reduce discomfort to the patient. However, they come with their fair share of problems :-</p>
+<ul class="list">
+<li>The reading vs pressure changes are not linear. They drop at around 1000 Pa.</li>
+<li>There should be a suitable volume of air in the air sensors before they are used. The quantity of air in the sensors affects the measurement results, as the sensor needs air to transfer the pressure. For example, if there is no air in it, data cannot be obtained. Otherwise, if it accepts too much air, the existing air pressure will result in large change.</li>
+<li>Air leaks may render the sensor completely useless. They also make testing very difficult</li>
+<li>The soft plastic usually used in these sensors may break under repeated use.</li>
+</ul>
+<p class="img-container"><img src="http://i.imgur.com/dAoDUVu.png" alt="Image Alt"></p>
+<p>Force Sensors are typically tested by application of metric weights. The relationship between weight applied and readings is typically linear.</p>
+<p class="img-container"><img src="http://i.imgur.com/eFrZWtV.png" alt="Image Alt"></p>
+<p>It is because of the above reasons that force sensors are usually preferred because the readings are linear with pressure (Laplace&#39;s law), simple electronic interface and robustness.</p>
+<p>In order to test these sensors, a hollow dummy leg is used to model the &#39;average&#39; leg. The leg is kept hollow to improve ease of construction and wiring.</p>
+<p>Another new innovation in bandages is to etch rhombi on the surface of the bandage. The aspect ratio of the rhombi is kept such that when a constant amount of the required pressure is applied, the rhombi are stretched to be approximately square. This provides an easy visual clue to the doctor/nurse that the right pressure has been applied.</p>
+<h2 id="final-product"><a class="header-link" href="#final-product"></a>Final Product</h2>
+<p>The circuit diagram and the screenshots of the software(built in Visual Basic) are seen below.</p>
+<p><img src="http://i.imgur.com/RBlgb2U.png" alt="Image Alt">
+<img src="http://i.imgur.com/ErraizQ.png" alt="Image Alt"></p>
+<h2 id="testing-and-review-results"><a class="header-link" href="#testing-and-review-results"></a>Testing and review results</h2>
+<p>First, a test was conducted to see if the surface area of the instrument affected the pressure readings. The test was carried out with the compression bandage applied to the bare sensor (diameter 6.5mm) and then to the sensor with a disk attached (diameter 18mm). To achieve the same bandage tension, a compression bandage with regular squares was used. The principle was that if the tension of the bandage could be kept same when it was applied, the widths of the squares would be same.</p>
+<p>Following are the results for different circumferences of wrapping(corresponding to decreased height of wrapping). As can be seen, the pressure increases with the tension applied. But, the pressure for increasing radius remains same, which is a desirable outcome.</p>
+<p class="img-container"><img src="http://i.imgur.com/NjnXw4m.png" alt="Image Alt"></p>
+<p>However, if we increase the number of layers of a bandage, the pressure increases linearly, following Laplace&#39;s law</p>
+<p class="img-container"><img src="http://i.imgur.com/l371tAy.png" alt="Image Alt"></p>
+<h2 id="conclusion"><a class="header-link" href="#conclusion"></a>Conclusion</h2>
+<p>It was observed in the study that the results do not exactly match up with Laplace&#39;s law. This may be due to several reasons. Firstly, the materials are different (a real human leg is much more compressible than the wood model used in the lab). So, the shape of the leg may change due to this pressure. Secondly, in the real leg, the pressure applied by the bandage has to reach the veins of the leg. These veins lie at deeper depth under a layer of skin and fat. In the wooden model, this force is only on the surface. Lastly, differing levels of training  in the volunteers may cause issues.</p>
+<h2 id="references"><a class="header-link" href="#references"></a>References</h2>
+<ul class="list">
+<li>Sockalingham S., Barbenel J.C., Queen D., Ambulatory monitoring of the pressures beneath compression bandages. Care Science and Practice, 1990, 8(2), 75-79.</li>
+<li>Callam A.B., Haiart D., Farouk M., et al., Effect of time and posture on pressure profiles obtained by three different types of compression. Phlebology, 1991, 6, 79-84.</li>
+</ul>
+    </article>
+  </body>
+</html>
